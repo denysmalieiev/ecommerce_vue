@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 
 onMounted(()=>{
   console.log("Main layout mounted")
@@ -13,6 +14,7 @@ onMounted(()=>{
   <main class="main">
     <slot/>
   </main>
+  <Footer/>
 </div>
 </template>
 
