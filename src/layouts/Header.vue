@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <h2>Logo</h2>
     <ul class="menu">
       <li class="menu--item">
@@ -9,7 +9,7 @@
         <router-link to="/about">About</router-link>
       </li>
     </ul>
-  </div>
+  </header>
 </template>
 
 <style scoped lang="scss">
