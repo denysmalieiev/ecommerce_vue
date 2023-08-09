@@ -26,7 +26,6 @@ onMounted(()=>{
   background-color: darkgray;
 }
 .main{
-  border:1px solid red;
   flex-grow: 1;
 }
 </style>

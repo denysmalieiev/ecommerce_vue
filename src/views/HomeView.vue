@@ -1,5 +1,6 @@
 <script setup>
 import {ref,onMounted} from "vue";
+import Container from "../components/Container.vue";
 
 const a=ref('abc')
 const count=ref(1)
@@ -14,10 +15,14 @@ const handleClick=()=>{
 </script>
 
 <template>
-  <div>
+ <div>
+  <Container>
+    <div>
     <p>{{ a }}</p>
   </div>
   <h2>Homepage</h2>
   <p>counter {{ count }}</p>
   <button @click="handleClick">click</button>
+  </Container>
+ </div>
 </template>
