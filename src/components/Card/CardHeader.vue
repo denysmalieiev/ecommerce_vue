@@ -1,9 +1,4 @@
 <script setup>
-import { onMounted } from "vue";
-
-onMounted(()=>{
-  console.log("card header com mounted")
-})
 </script>
 
 <template>

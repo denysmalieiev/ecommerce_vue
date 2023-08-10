@@ -1,10 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
 import img from "../../assets/photo.jpeg";
-
-onMounted(()=>{
-  console.log("card media com mounted")
-})
 </script>
 
 <template>
