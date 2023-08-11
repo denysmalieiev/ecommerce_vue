@@ -14,6 +14,9 @@ import Container from "../components/Container.vue";
         <router-link to="/about">About</router-link>
       </li>
       <li class="menu--item">
+        <router-link to="/ui">Ui</router-link>
+      </li>
+      <li class="menu--item">
         <router-link to="/login">Login</router-link>
       </li>
     </ul>
