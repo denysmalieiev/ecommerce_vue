@@ -1,4 +1,6 @@
 <script setup>
+import SimpleButton from "./SimpleButton.vue";
+
 const props= defineProps({
   show:Boolean
 })
@@ -10,7 +12,7 @@ const props= defineProps({
   <div class="menu" :class="{active:show}">
     <div class="menu-header">
       <h2>Logo</h2>
-      <button @click="$emit('close')" class="close">X</button>
+      <simple-button size="small" color="secondary" @click="$emit('close')">X</simple-button>
     </div>
     <div class="menu-body">
       <slot/>
@@ -22,14 +24,14 @@ const props= defineProps({
 <style scoped lang="scss">
 .shadow{
   background-color: rgba(0,0,0,.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
 .menu{
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -50,23 +52,4 @@ const props= defineProps({
     align-items: center;
   }
 }
-
-.close{
-  background-color: transparent;
-  border-radius: 4px;
-  padding: 5px;
-  min-width: 30px;
-  font-weight: 700;
-  background-color: darkgray;
-  border: none;
-  outline: none;
-  border: 1px solid darkgray;
-  transition: background-color .3s linear;
-
-  &:hover{
-    background-color: transparent;
-  }
-}
-
-
 </style>
