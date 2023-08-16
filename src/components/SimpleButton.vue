@@ -3,8 +3,6 @@ const props = defineProps({
   color: String,
   size: String,
 });
-
-console.log('prosp', props.color);
 </script>
 
 <template>

@@ -1,4 +1,4 @@
-<script>
+<script async setup>
 import { ref } from 'vue';
 
 const loadUserData = async () => {
@@ -13,15 +13,7 @@ const loadUserData = async () => {
   });
 };
 
-export default {
-  async setup() {
-    const userData = ref(await loadUserData());
-
-    return {
-      userData,
-    };
-  },
-};
+const userData = ref(await loadUserData());
 </script>
 
 <template>
