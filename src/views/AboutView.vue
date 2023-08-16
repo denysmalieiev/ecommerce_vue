@@ -1,5 +1,5 @@
 <script setup>
-  import Container from "../components/Container.vue";
+import Container from '../components/Container.vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped lang="scss">
-h2{
+h2 {
   margin-bottom: 40px;
 }
 </style>

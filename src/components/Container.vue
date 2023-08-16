@@ -1,19 +1,19 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted } from 'vue';
 
-onMounted(()=>{
-  console.log("container com mounted")
-})
+onMounted(() => {
+  console.log('container com mounted');
+});
 </script>
 
 <template>
   <div class="container">
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
-.container{
+.container {
   max-width: 1230px;
   margin: 0 auto;
   width: 100%;

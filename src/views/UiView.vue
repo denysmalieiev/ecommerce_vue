@@ -1,66 +1,85 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
 import Container from '../components/Container.vue';
 import SimpleDrawer from '../components/SimpleDrawer.vue';
-import Modal from "../components/Modal.vue";
+import Modal from '../components/Modal.vue';
+import SimpleButton from '../components/SimpleButton.vue';
+import ProfileCard from '../components/ProfileCard.vue';
+import ProfileCardSkeleton from '../components/ProfileCardSkeleton.vue';
+4;
 
+const showDrawer = ref(false);
+const openDrawer = () => (showDrawer.value = true);
+const closeDrawer = () => (showDrawer.value = false);
 
-const showDrawer=ref(false);
+const showModal = ref(false);
+const closeModal = () => (showModal.value = false);
+const openModal = () => (showModal.value = true);
 
-const openDrawer=()=>showDrawer.value=true;
-const closeDrawer=()=>showDrawer.value=false;
-
-const showModal=ref(false)
-const closeModal=()=>showModal.value=false;
-const openModal=()=>showModal.value=true;
+const handleClick = () => console.log('click');
 </script>
 
 <template>
-    <Container class="ui">
-       <section class="section">
-        <h2>Simple Drawer</h2>
-          <simple-drawer :show="showDrawer" @close="closeDrawer" >
-           <h2>
-              About
-            </h2>
-          </simple-drawer>
-          <button @click="openDrawer" class="btn">Open drawer</button>
+  <Container class="ui">
+    <section class="section">
+      <h2 class="title">Simple Drawer</h2>
+      <simple-drawer :show="showDrawer" @close="closeDrawer">
+        <h2>About</h2>
+      </simple-drawer>
+      <simple-button
+        size="medium"
+        color="primary"
+        @click="openDrawer"
+        class="btn"
+        >Open drawer</simple-button
+      >
+    </section>
+    <!-- <section class="section">
+        <h2 class="title">Simple Popup</h2>
+        <simple-button size="medium" color="primary" class="btn" @click="openModal">Open Modal</simple-button>
+      <modal :show="showModal" @close="closeModal"
+      title="This is a header"
+      text="This is a text section"
+      />
        </section>
        <section class="section">
-        <h2>Simple Popup</h2>
-        <button class="btn" @click="openModal">Open Modal</button>
-      <modal :show="showModal" @close="closeModal">
-       <h3> This is a modal</h3>
-       <template #header>
-        <h2>This is a header</h2>
-       </template>
-       <template #body>
-        <h2>This is a body</h2>
-       </template>
-      </modal>
-       </section>
-    </Container>
+         <h2 class="title">Buttons</h2>
+         <simple-button size="small" color="primary" @click="handleClick">Ok</simple-button>
+         <br>
+         <br>
+         <simple-button size="medium" color="primary" @click="handleClick">Ok</simple-button>
+         <br>
+         <br>
+         <simple-button size="big" color="primary" @click="handleClick">Ok</simple-button>
+       </section> -->
+    <section class="section">
+      <h2 class="title">Card Skeletion</h2>
+      <Suspense>
+        <template #default>
+          <profile-card />
+        </template>
+        <template #fallback>
+          <ProfileCardSkeleton />
+        </template>
+      </Suspense>
+    </section>
+  </Container>
 </template>
 
 <style scoped lang="scss">
-.ui{
+.ui {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.section{
+.section {
   padding-top: 20px;
   padding-bottom: 80px;
   border-bottom: 1px solid darkcyan;
 }
 
-h2{
+.title {
   margin-bottom: 20px;
-}
-.btn{
-  padding: 8px 15px;
-  font-size: 18px;
-  font-weight: 400;
 }
 </style>

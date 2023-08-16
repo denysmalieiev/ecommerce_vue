@@ -1,35 +1,39 @@
 <script setup>
-const props= defineProps({
-  show:Boolean
-})
+import SimpleButton from './SimpleButton.vue';
+
+const props = defineProps({
+  show: Boolean,
+});
 </script>
 
 <template>
-<Teleport to="body">
-  <div v-if="show" class="shadow"/>
-  <div class="menu" :class="{active:show}">
-    <div class="menu-header">
-      <h2>Logo</h2>
-      <button @click="$emit('close')" class="close">X</button>
+  <Teleport to="body">
+    <div v-if="show" class="shadow" />
+    <div class="menu" :class="{ active: show }">
+      <div class="menu-header">
+        <h2>Logo</h2>
+        <simple-button size="small" color="secondary" @click="$emit('close')"
+          >X</simple-button
+        >
+      </div>
+      <div class="menu-body">
+        <slot />
+      </div>
     </div>
-    <div class="menu-body">
-      <slot/>
-    </div>
-    </div>
-</Teleport>
+  </Teleport>
 </template>
 
 <style scoped lang="scss">
-.shadow{
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
+.shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
 }
-.menu{
-  position: absolute;
+.menu {
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -41,32 +45,13 @@ const props= defineProps({
   transform: translateX(-100%);
   transition: transform 0.3s linear;
 
-  &.active{
-    transform: translateX(0)
+  &.active {
+    transform: translateX(0);
   }
-  &-header{
+  &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-
-.close{
-  background-color: transparent;
-  border-radius: 4px;
-  padding: 5px;
-  min-width: 30px;
-  font-weight: 700;
-  background-color: darkgray;
-  border: none;
-  outline: none;
-  border: 1px solid darkgray;
-  transition: background-color .3s linear;
-
-  &:hover{
-    background-color: transparent;
-  }
-}
-
-
 </style>
