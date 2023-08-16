@@ -1,11 +1,11 @@
 <script setup>
-import SimpleButton from "./SimpleButton.vue";
+import SimpleButton from './SimpleButton.vue';
 
 defineProps({
-  show:Boolean,
-  title:String,
-  text:String,
-})
+  show: Boolean,
+  title: String,
+  text: String,
+});
 </script>
 
 <template>
@@ -18,42 +18,49 @@ defineProps({
         <div class="body">
           <p>{{ text }}</p>
         </div>
-         <div class="footer">
-          <simple-button size="medium" color="secondary" class="btn" @click="$emit('close')">Close</simple-button>
-         </div>
+        <div class="footer">
+          <simple-button
+            size="medium"
+            color="secondary"
+            class="btn"
+            @click="$emit('close')"
+            >Close</simple-button
+          >
+        </div>
       </div>
     </div>
   </Teleport>
 </template>
 
 <style scoped lang="scss">
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.content{
+.content {
   width: 100%;
   max-width: 350px;
   border-radius: 5px;
   background-color: #fff;
 }
-.footer,.header{
+.footer,
+.header {
   padding: 12px;
 }
-.header{
+.header {
   border-bottom: 1px solid darkgray;
 }
-.body{
+.body {
   padding: 15px 12px;
 }
-.footer{
+.footer {
   display: flex;
   justify-content: flex-end;
   border-top: 1px solid darkgray;

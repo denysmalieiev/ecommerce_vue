@@ -1,5 +1,5 @@
 <script setup>
-import MainLayout from "./layouts/MainLayout.vue";
+import MainLayout from './layouts/MainLayout.vue';
 </script>
 
 <template>
@@ -8,5 +8,4 @@ import MainLayout from "./layouts/MainLayout.vue";
   </MainLayout>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

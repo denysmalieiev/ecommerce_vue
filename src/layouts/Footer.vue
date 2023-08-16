@@ -1,10 +1,10 @@
 <script setup>
-import { onMounted } from "vue";
-import Container from "../components/Container.vue";
+import { onMounted } from 'vue';
+import Container from '../components/Container.vue';
 
-onMounted(()=>{
-  console.log("Footer mounted")
-})
+onMounted(() => {
+  console.log('Footer mounted');
+});
 </script>
 
 <template>
@@ -16,7 +16,7 @@ onMounted(()=>{
 </template>
 
 <style scoped lang="scss">
-.footer{
+.footer {
   background-color: darkcyan;
   padding-top: 15px;
   padding-bottom: 15px;

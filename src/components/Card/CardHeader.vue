@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div class="card-header">
@@ -8,9 +7,9 @@
 </template>
 
 <style scoped lang="scss">
-.card-header{
+.card-header {
   width: 100%;
-  border-bottom:1px solid blue;
+  border-bottom: 1px solid blue;
   padding: 10px;
 }
 </style>

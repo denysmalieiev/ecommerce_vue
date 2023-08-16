@@ -1,17 +1,16 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div class="card-overlay">
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
-.card-overlay{
+.card-overlay {
   max-width: 350px;
   width: 100%;
-  border:1px solid blue;
+  border: 1px solid blue;
   border-radius: 8px;
 }
 </style>

@@ -1,12 +1,12 @@
 <script setup>
-import { onMounted } from "vue";
-import Container from "../components/Container.vue";
+import { onMounted } from 'vue';
+import Container from '../components/Container.vue';
 
-console.log("login page",Date.now())
+console.log('login page', Date.now());
 
-onMounted(()=>{
-  console.log("login page mounted",Date.now())
-})
+onMounted(() => {
+  console.log('login page mounted', Date.now());
+});
 </script>
 
 <template>
@@ -17,5 +17,4 @@ onMounted(()=>{
   </div>
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
