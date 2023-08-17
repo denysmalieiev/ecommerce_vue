@@ -7,7 +7,6 @@ const props = defineProps({
 </script>
 
 <template>
-  <h2>Card list</h2>
   <div class="list">
     <Card v-for="item of props.items" key="item" />
   </div>
@@ -17,6 +16,7 @@ const props = defineProps({
 .list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
+  grid-row-gap: 50px;
+  grid-column-gap: 30px;
 }
 </style>

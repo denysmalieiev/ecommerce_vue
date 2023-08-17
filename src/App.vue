@@ -1,14 +1,14 @@
 <script setup>
-import MainLayout from "./layouts/MainLayout.vue";
-import { useCounterStore } from './stores/counter'
+import MainLayout from './layouts/MainLayout.vue';
+import { useCounterStore } from './stores/counter';
 
-const counter = useCounterStore()
+const counter = useCounterStore();
 
-counter.count++
+counter.count++;
 // with autocompletion ✨
-counter.$patch({ count: counter.count + 1 })
+counter.$patch({ count: counter.count + 1 });
 // or using an action instead
-counter.increment()
+counter.increment();
 </script>
 
 <template>
