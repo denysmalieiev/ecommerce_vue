@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted,provide,ref } from 'vue';
+import { onMounted, provide, ref } from 'vue';
 
 import Header from './Header.vue';
 import Footer from './Footer.vue';
@@ -8,10 +8,10 @@ onMounted(() => {
   console.log('Main layout mounted');
 });
 
-const counter=ref(0);
+const counter = ref(0);
 
-provide('text','hello from main layout')
-provide('counter',counter);
+provide('text', 'hello from main layout');
+provide('counter', counter);
 
 setTimeout(() => {
   counter.value++;

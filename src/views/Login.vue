@@ -1,13 +1,22 @@
 <script setup>
-import { onMounted,inject } from 'vue';
-import Container from '../components/Container.vue';
+import { onMounted, inject } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
-console.log('login page', Date.now());
+import Container from '../components/Container.vue';
 
 onMounted(() => {
   console.log('login page mounted', Date.now());
 });
-const text=inject('text');
+
+const router = useRouter();
+const route = useRoute();
+
+const handleBackHome = () => {
+  console.log('route: ', route);
+  router.push('/');
+};
+
+const text = inject('text');
 </script>
 
 <template>
@@ -15,6 +24,7 @@ const text=inject('text');
     <Container>
       <h2>Login page</h2>
       <p>{{ text }}</p>
+      <button @click="handleBackHome">Back</button>
     </Container>
   </div>
 </template>
