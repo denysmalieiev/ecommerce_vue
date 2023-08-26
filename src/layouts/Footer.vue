@@ -10,7 +10,7 @@ onMounted(() => {
 <template>
   <footer class="footer">
     <Container>
-      <h2>Footer</h2>
+      <h2 class="title">Footer</h2>
     </Container>
   </footer>
 </template>
@@ -20,5 +20,8 @@ onMounted(() => {
   background-color: darkcyan;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+.title{
+  text-align: center;
 }
 </style>
