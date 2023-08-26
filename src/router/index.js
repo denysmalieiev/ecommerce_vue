@@ -5,6 +5,7 @@ import AboutPage from '../views/AboutView.vue';
 import UiPage from '../views/UiView.vue';
 import LoginPage from '../views/Login.vue';
 import CategoryView from '../views/CategoryViews/CategoryView.vue';
+import DetailsView from '../views/DetailsViews/DetailsViews.vue';
 
 const routes = [
   {
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/category/:categoryName',
     component: CategoryView,
+  },
+  {
+    path: '/details/:productItem',
+    component: DetailsView,
   },
 ];
 
