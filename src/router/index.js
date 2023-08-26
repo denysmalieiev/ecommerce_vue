@@ -4,6 +4,7 @@ import HomePage from '../views/HomeViews/HomeView.vue';
 import AboutPage from '../views/AboutView.vue';
 import UiPage from '../views/UiView.vue';
 import LoginPage from '../views/Login.vue';
+import CategoryView from '../views/CategoryViews/CategoryView.vue';
 
 const routes = [
   {
@@ -21,6 +22,10 @@ const routes = [
   {
     path: '/login',
     component: LoginPage,
+  },
+  {
+    path: '/category/:categoryName',
+    component: CategoryView,
   },
 ];
 

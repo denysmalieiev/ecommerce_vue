@@ -1,23 +1,46 @@
 <script setup>
 import Container from '../components/Container.vue';
+
+const secondaryNavItems=[
+  {
+    path:'/about',
+    name:"About",
+  },
+  {
+    path:'/category/all',
+    name:"All"
+  },
+  {
+    path:'/category/man',
+    name:"Man"
+  },
+  {
+    path:'/category/woman',
+    name:"Woman"
+  },
+  {
+    path:'/ui',
+    name:"Ui",
+  },
+  {
+    path:'/login',
+    name:"Login",
+  },
+]
 </script>
 
 <template>
   <header class="header">
     <Container class="content">
-      <h2>Logo</h2>
-      <ul class="menu">
-        <li class="menu--item">
-          <router-link to="/">Home</router-link>
-        </li>
-        <li class="menu--item">
-          <router-link to="/about">About</router-link>
-        </li>
-        <li class="menu--item">
-          <router-link to="/ui">Ui</router-link>
-        </li>
-        <li class="menu--item">
-          <router-link to="/login">Login</router-link>
+    <div class="primaryNav">
+      <h2 class="logo">
+      <router-link to="/">Logo</router-link>  
+      </h2>
+      <input/>
+    </div>
+      <ul class="menu secondaryNav">
+        <li class="menu--item" v-for="item in secondaryNavItems" :key="item.path">
+          <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
     </Container>
@@ -30,12 +53,22 @@ import Container from '../components/Container.vue';
   padding: 15px 0;
 }
 
-.content {
+.logo a{
+  color:#fff;
+}
+
+.primaryNav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
 }
 
+.secondaryNav{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
 .menu {
   display: flex;
   align-items: center;
