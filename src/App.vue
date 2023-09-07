@@ -1,6 +1,6 @@
 <script setup>
-import MainLayout from './layouts/MainLayout.vue';
-import { useCounterStore } from './stores/counter';
+import MainLayout from "./layouts/MainLayout.vue";
+import { useCounterStore } from "./stores/counter";
 
 const counter = useCounterStore();
 

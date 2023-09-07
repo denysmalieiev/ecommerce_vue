@@ -1,5 +1,5 @@
 <script setup>
-import Card from './Card/index.vue';
+import Card from "./Card/index.vue";
 
 const props = defineProps({
   items: Array,
@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
   <div class="list">
-    <Card v-for="item of props.items" key="item" :item="item"/>
+    <Card v-for="item of props.items" :item="item" v-bind:key="item" />
   </div>
 </template>
 

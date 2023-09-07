@@ -1,36 +1,43 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
-import HomePage from '../views/HomeViews/HomeView.vue';
-import AboutPage from '../views/AboutView.vue';
-import UiPage from '../views/UiView.vue';
-import LoginPage from '../views/Login.vue';
-import CategoryView from '../views/CategoryViews/CategoryView.vue';
-import DetailsView from '../views/DetailsViews/DetailsViews.vue';
+import HomePage from "../views/HomeViews/HomeView.vue";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
+    name: "Home",
+    meta: { layout: "main", auth: true },
     component: HomePage,
   },
   {
-    path: '/about',
-    component: AboutPage,
+    path: "/about",
+    name: "About",
+    meta: { layout: "main", auth: true },
+    component: () => import("../views/AboutView.vue"),
   },
   {
-    path: '/ui',
-    component: UiPage,
+    path: "/ui",
+    name: "Ui",
+    meta: { layout: "main", auth: true },
+    component: () => import("../views/UiView.vue"),
   },
   {
-    path: '/login',
-    component: LoginPage,
+    path: "/login",
+    name: "Login",
+    meta: { layout: "main", auth: false },
+    component: () => import("../views/Login.vue"),
   },
   {
-    path: '/category/:categoryName',
-    component: CategoryView,
+    path: "/category/:categoryName",
+    name: "Category",
+    meta: { layout: "main", auth: false },
+    component: () => import("../views/CategoryViews/CategoryView.vue"),
   },
   {
-    path: '/details/:productItem',
-    component: DetailsView,
+    path: "/details/:productItem",
+    name: "Details",
+    meta: { layout: "main", auth: false },
+    component: () => import("../views/DetailsViews/DetailsViews.vue"),
   },
 ];
 

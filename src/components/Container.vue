@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 
 onMounted(() => {
-  console.log('container com mounted');
+  console.log("container com mounted");
 });
 </script>
 

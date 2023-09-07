@@ -1,7 +1,7 @@
 <script setup>
-import Container from '../../components/Container.vue';
-import HomeBanner from './HomeBanner.vue';
-import CardList from '../../components/CardList.vue';
+import Container from "../../components/Container.vue";
+import HomeBanner from "./HomeBanner.vue";
+import CardList from "../../components/CardList.vue";
 
 const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 </script>

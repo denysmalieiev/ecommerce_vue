@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted } from 'vue';
-import Container from '../components/Container.vue';
+import { onMounted } from "vue";
+import Container from "../components/Container.vue";
 
 onMounted(() => {
-  console.log('Footer mounted');
+  console.log("Footer mounted");
 });
 </script>
 

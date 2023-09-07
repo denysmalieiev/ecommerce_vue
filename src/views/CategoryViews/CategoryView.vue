@@ -1,13 +1,25 @@
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute } from "vue-router";
 
 import Container from "../../components/Container.vue";
-import CardList from '../../components/CardList.vue';
+import CardList from "../../components/CardList.vue";
 
 const route=useRoute();
-console.log("route: ",route.params.categoryName)
+console.log("route: ",route.params.categoryName);
 
-const items=[1,2,3,4,5,6,7,8,9,10,11,12]
+const items=[1,2,3,4,5,6,7,8,9,10,11,12];
+
+/**
+ * fun
+ * @param {number} a 
+ * @param {number} b
+ * @return {number} a+b; 
+ */
+
+const fun=(a,b)=>{
+  return a+b;
+};
+
 </script>
 
 <template>

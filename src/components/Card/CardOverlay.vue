@@ -1,9 +1,9 @@
 <script setup>
-const emit = defineEmits(['clk'])
+const emit = defineEmits(["clk"]);
 
 const handleClick=()=>{
-  emit('clk')
-}
+  emit("clk");
+};
 </script>
 
 <template>

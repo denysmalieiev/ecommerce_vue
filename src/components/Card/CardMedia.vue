@@ -1,5 +1,5 @@
 <script setup>
-import img from '../../assets/photo.jpeg';
+import img from "../../assets/photo.jpeg";
 </script>
 
 <template>

@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-import Container from '../components/Container.vue';
-import SimpleDrawer from '../components/SimpleDrawer.vue';
-import Modal from '../components/Modal.vue';
-import SimpleButton from '../components/SimpleButton.vue';
-import ProfileCard from '../components/ProfileCard.vue';
-import ProfileCardSkeleton from '../components/ProfileCardSkeleton.vue';
+import Container from "../components/Container.vue";
+import SimpleDrawer from "../components/SimpleDrawer.vue";
+import Modal from "../components/Modal.vue";
+import SimpleButton from "../components/SimpleButton.vue";
+import ProfileCard from "../components/ProfileCard.vue";
+import ProfileCardSkeleton from "../components/ProfileCardSkeleton.vue";
 4;
 
 const showDrawer = ref(false);
@@ -17,7 +17,7 @@ const showModal = ref(false);
 const closeModal = () => (showModal.value = false);
 const openModal = () => (showModal.value = true);
 
-const handleClick = () => console.log('click');
+const handleClick = () => console.log("click");
 </script>
 
 <template>
@@ -30,8 +30,8 @@ const handleClick = () => console.log('click');
       <simple-button
         size="medium"
         color="primary"
-        @click="openDrawer"
         class="btn"
+        @click="openDrawer"
         >Open drawer</simple-button
       >
     </section>

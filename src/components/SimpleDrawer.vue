@@ -1,5 +1,5 @@
 <script setup>
-import SimpleButton from './SimpleButton.vue';
+import SimpleButton from "./SimpleButton.vue";
 
 const props = defineProps({
   show: Boolean,

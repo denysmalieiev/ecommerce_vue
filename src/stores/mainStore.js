@@ -1,7 +1,7 @@
-export const useMainStore = defineStore('main', {
+export const useMainStore = defineStore("main", {
   state: () => ({
     counter: 0,
-    name: 'Yaxyo',
+    name: "Yaxyo",
   }),
   getters: {
     doubleCounter: state => state.counter * 2,

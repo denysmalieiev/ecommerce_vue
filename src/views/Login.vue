@@ -1,22 +1,22 @@
 <script setup>
-import { onMounted, inject } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
+import { onMounted, inject } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-import Container from '../components/Container.vue';
+import Container from "../components/Container.vue";
 
 onMounted(() => {
-  console.log('login page mounted', Date.now());
+  console.log("login page mounted", Date.now());
 });
 
 const router = useRouter();
 const route = useRoute();
 
 const handleBackHome = () => {
-  console.log('route: ', route);
-  router.push('/');
+  console.log("route: ", route);
+  router.push("/");
 };
 
-const text = inject('text');
+const text = inject("text");
 </script>
 
 <template>

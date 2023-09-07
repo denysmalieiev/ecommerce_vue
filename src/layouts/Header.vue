@@ -1,32 +1,32 @@
 <script setup>
-import Container from '../components/Container.vue';
+import Container from "../components/Container.vue";
 
 const secondaryNavItems=[
   {
-    path:'/about',
+    path:"/about",
     name:"About",
   },
   {
-    path:'/category/all',
+    path:"/category/all",
     name:"All"
   },
   {
-    path:'/category/man',
+    path:"/category/man",
     name:"Man"
   },
   {
-    path:'/category/woman',
+    path:"/category/woman",
     name:"Woman"
   },
   {
-    path:'/ui',
+    path:"/ui",
     name:"Ui",
   },
   {
-    path:'/login',
+    path:"/login",
     name:"Login",
   },
-]
+];
 </script>
 
 <template>
@@ -39,7 +39,7 @@ const secondaryNavItems=[
       <input/>
     </div>
       <ul class="menu secondaryNav">
-        <li class="menu--item" v-for="item in secondaryNavItems" :key="item.path">
+        <li v-for="item in secondaryNavItems" :key="item.path" class="menu--item">
           <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
