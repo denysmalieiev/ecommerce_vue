@@ -5,60 +5,82 @@ import Container from "../../components/Container.vue";
 <template>
   <Container>
     <div class="content">
-       <div class="image">
-        <img src="https://ecommerce-netlify.netlify.app/products/5.png"/>
-       </div>
-       <div class="info">
-         <h2 class="title">Lorem ipsum</h2>
-         <h4 class="text">Price: 40$</h4>
-         <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-         <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-         <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-         <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-       </div>
+      <div class="image">
+        <img src="https://ecommerce-netlify.netlify.app/products/5.png" />
+      </div>
+      <div class="info">
+        <h2 class="title">Lorem ipsum</h2>
+        <h4 class="text">Price: 40$</h4>
+        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
+          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
+        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
+          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
+        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
+          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
+        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
+          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
+      </div>
     </div>
   </Container>
 </template>
 
 <style scoped lang="scss">
-.content{
+.content {
   display: flex;
   align-items: center;
   padding-top: 50px;
-}
+  flex-direction: column;
 
-.image,.info{
-  width: 50%;
-  padding: 20px;
-}
-
-.image{
-  width: 40%;
-  padding: 20px;
-  text-align: center;
-
-  img{
-    width: auto;
-    height: auto;
+  @media (min-width: 500px) {
+    flex-direction: row;
   }
 }
-.info{
-  width: 60%;
-  padding: 20px 0 20px 20px;
+
+.image,
+.info {
+  width: 100%;
+  padding: 10px;
+
+  @media (min-width: 500px) {
+    width: 50%;
+    padding: 20px;
+  }
 }
 
-.title{
+.image {
+  width: 100%;
+
+  @media (min-width: 500px) {
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  width: 100%;
+
+  @media (min-width: 500px) {
+    padding: 20px 0 20px 20px;
+  }
+}
+
+.title {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 25px;
 }
 
-.text{
+.text {
   font-size: 22px;
   margin-bottom: 15px;
 }
 
-.subText{
+.subText {
   font-size: 16px;
 }
 </style>

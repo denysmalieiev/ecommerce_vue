@@ -12,9 +12,7 @@ const props = defineProps({
     <div class="menu" :class="{ active: show }">
       <div class="menu-header">
         <h2>Logo</h2>
-        <simple-button size="small" color="secondary" @click="$emit('close')"
-          >X</simple-button
-        >
+        <simple-button size="small" color="secondary" @click="$emit('close')">X</simple-button>
       </div>
       <div class="menu-body">
         <slot />
@@ -32,6 +30,7 @@ const props = defineProps({
   left: 0;
   bottom: 0;
 }
+
 .menu {
   position: fixed;
   top: 0;
@@ -40,14 +39,16 @@ const props = defineProps({
   width: 100%;
   max-width: 300px;
   height: 100%;
-  background-color: #fff;
+  background-color: red;
   padding: 20px;
   transform: translateX(-100%);
   transition: transform 0.3s linear;
+  z-index: 99999999;
 
   &.active {
     transform: translateX(0);
   }
+
   &-header {
     display: flex;
     justify-content: space-between;
