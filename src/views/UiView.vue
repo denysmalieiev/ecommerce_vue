@@ -7,11 +7,8 @@ import Modal from "../components/Modal.vue";
 import SimpleButton from "../components/SimpleButton.vue";
 import ProfileCard from "../components/ProfileCard.vue";
 import ProfileCardSkeleton from "../components/ProfileCardSkeleton.vue";
-4;
 
-const showDrawer = ref(false);
-const openDrawer = () => (showDrawer.value = true);
-const closeDrawer = () => (showDrawer.value = false);
+
 
 const showModal = ref(false);
 const closeModal = () => (showModal.value = false);
@@ -22,19 +19,7 @@ const handleClick = () => console.log("click");
 
 <template>
   <Container class="ui">
-    <section class="section">
-      <h2 class="title">Simple Drawer</h2>
-      <simple-drawer :show="showDrawer" @close="closeDrawer">
-        <h2>About</h2>
-      </simple-drawer>
-      <simple-button
-        size="medium"
-        color="primary"
-        class="btn"
-        @click="openDrawer"
-        >Open drawer</simple-button
-      >
-    </section>
+
     <!-- <section class="section">
         <h2 class="title">Simple Popup</h2>
         <simple-button size="medium" color="primary" class="btn" @click="openModal">Open Modal</simple-button>

@@ -35,6 +35,7 @@ setTimeout(() => {
   min-height: 100vh;
   background-color: darkgray;
 }
+
 .main {
   flex-grow: 1;
 }
