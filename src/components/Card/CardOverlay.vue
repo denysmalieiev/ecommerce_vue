@@ -1,7 +1,7 @@
 <script setup>
 const emit = defineEmits(["clk"]);
 
-const handleClick=()=>{
+const handleClick = () => {
   emit("clk");
 };
 </script>
@@ -21,7 +21,7 @@ const handleClick=()=>{
   cursor: pointer;
   transition: all 300ms;
 
-  &:hover{
+  &:hover {
     transform: scale(1.02);
   }
 }

@@ -6,9 +6,9 @@ import CardHeader from "./CardHeader.vue";
 import CardMedia from "./CardMedia.vue";
 import CardAction from "./CardAction.vue";
 
-const router=useRouter();
+const router = useRouter();
 
-const handleClick=()=>{
+const handleClick = () => {
   router.push("/details/ajdfk");
 };
 </script>

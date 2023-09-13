@@ -15,8 +15,20 @@ const props = defineProps({
 <style scoped lang="scss">
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 50px;
-  grid-column-gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+
+  @media (min-width: 400px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+  }
+
+  @media (min-width: 560px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+  }
 }
 </style>

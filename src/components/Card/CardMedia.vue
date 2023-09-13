@@ -10,8 +10,6 @@ import img from "../../assets/photo.jpeg";
 
 <style scoped lang="scss">
 .card-media {
-  width: 100%;
-  height: 200px;
 
   img {
     width: 100%;
