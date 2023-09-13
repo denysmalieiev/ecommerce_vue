@@ -39,11 +39,11 @@ const props = defineProps({
   width: 100%;
   max-width: 300px;
   height: 100%;
-  background-color: red;
+  background-color: white;
   padding: 20px;
   transform: translateX(-100%);
   transition: transform 0.3s linear;
-  z-index: 99999999;
+  z-index: 999999;
 
   &.active {
     transform: translateX(0);
