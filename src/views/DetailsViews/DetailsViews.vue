@@ -11,14 +11,26 @@ import Container from "../../components/Container.vue";
       <div class="info">
         <h2 class="title">Lorem ipsum</h2>
         <h4 class="text">Price: 40$</h4>
-        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
-          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
-          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
-          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
-        <p class="subText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem autem, et deserunt vero ipsum
-          harum quas nostrum doloribus voluptas reprehenderit voluptatem nemo, libero blanditiis accusantium.</p>
+        <p class="subText">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+          autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas
+          reprehenderit voluptatem nemo, libero blanditiis accusantium.
+        </p>
+        <p class="subText">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+          autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas
+          reprehenderit voluptatem nemo, libero blanditiis accusantium.
+        </p>
+        <p class="subText">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+          autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas
+          reprehenderit voluptatem nemo, libero blanditiis accusantium.
+        </p>
+        <p class="subText">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+          autem, et deserunt vero ipsum harum quas nostrum doloribus voluptas
+          reprehenderit voluptatem nemo, libero blanditiis accusantium.
+        </p>
       </div>
     </div>
   </Container>

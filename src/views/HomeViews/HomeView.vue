@@ -7,22 +7,22 @@ const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 </script>
 
 <template>
- <div class="homeView">
-  <home-banner />
+  <div class="homeView">
+    <home-banner />
     <Container>
       <h2 class="title">Products</h2>
       <card-list :items="items" />
     </Container>
- </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
-.homeView{
+.homeView {
   padding: 20px 0;
-  @media (min-width:560px) {
+  @media (min-width: 560px) {
     padding: 25px 0;
   }
-  @media (min-width:560px) {
+  @media (min-width: 560px) {
     padding: 30px 0;
   }
 }
@@ -33,7 +33,7 @@ const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   color: #fff;
   margin-top: 25px;
   @media (min-width: 560px) {
-  font-size: 28px;
+    font-size: 28px;
   }
 }
 

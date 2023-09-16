@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
   <div class="list">
-    <Card v-for="item of props.items" :item="item" v-bind:key="item" />
+    <Card v-for="item of props.items" :key="item" :item="item" />
   </div>
 </template>
 

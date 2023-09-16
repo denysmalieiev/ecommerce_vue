@@ -3,14 +3,13 @@ import Container from "../components/Container.vue";
 import MobileMenu from "./MobileMenu.vue";
 import menuItems from "./MenuItems.js";
 import TheLogo from "../components/TheLogo.vue";
-
 </script>
 
 <template>
   <header class="header">
     <Container class="content">
       <h2 class="logo">
-       <TheLogo/>
+        <TheLogo />
       </h2>
       <ul class="menu">
         <li v-for="item in menuItems" :key="item.path" class="menu__item">
@@ -26,7 +25,7 @@ import TheLogo from "../components/TheLogo.vue";
 .header {
   padding: 15px 0;
   box-shadow: inset 0px -1px 1px rgb(31, 38, 46);
-    background-color: rgba(16, 20, 24, 0.7);
+  background-color: rgba(16, 20, 24, 0.7);
 }
 
 .content {

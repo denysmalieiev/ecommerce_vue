@@ -1,12 +1,12 @@
 <script setup>
 import { inject } from "vue";
-import { useForm,ErrorMessage,Form,Field } from "vee-validate";
+import { useForm, ErrorMessage, Form, Field } from "vee-validate";
 import * as yup from "yup";
 
 import Container from "../components/Container.vue";
 
-const text=inject("text");
-const counter=inject("counter");
+const text = inject("text");
+const counter = inject("counter");
 
 const schema = yup.object({
   email: yup.string().required().email(),
@@ -43,12 +43,12 @@ const onSubmit = values => {
       <h2>Text: {{ text }}</h2>
       <h2>Counter : {{ counter }}</h2>
       <Form :validation-schema="schema" @submit="onSubmit">
-    <Field name="email" type="email" />
-    <ErrorMessage name="email" />
-    <Field name="password" type="password" />
-    <ErrorMessage name="password" />
-    <button>Submit</button>
-  </Form>
+        <Field name="email" type="email" />
+        <ErrorMessage name="email" />
+        <Field name="password" type="password" />
+        <ErrorMessage name="password" />
+        <button>Submit</button>
+      </Form>
     </Container>
   </div>
 </template>

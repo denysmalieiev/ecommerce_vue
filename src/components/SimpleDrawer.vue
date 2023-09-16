@@ -9,13 +9,15 @@ defineProps({
 
 <template>
   <Teleport to="body">
-    <div v-if="show" class="shadow" />
-    <div class="menu" :class="{ active: show }">
-      <div class="menu-header">
-       <TheLogo/>
-        <simple-button size="small" color="secondary" @click="$emit('close')">X</simple-button>
+    <div v-if="show" class="shadow" @click="$emit('close')" />
+    <div class="d__menu" :class="{ active: show }">
+      <div class="d__menu--header">
+        <TheLogo @close="$emit('close')" />
+        <simple-button size="small" color="secondary" @click="$emit('close')"
+          >X</simple-button
+        >
       </div>
-      <div class="menu-body">
+      <div class="d__menu--body">
         <slot />
       </div>
     </div>
@@ -30,9 +32,10 @@ defineProps({
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 999998;
 }
 
-.menu {
+.d__menu {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -41,7 +44,7 @@ defineProps({
   max-width: 300px;
   height: 100%;
   background-color: #121212;
-  padding: 20px;
+  padding: 0 20px;
   transform: translateX(-100%);
   transition: transform 0.3s linear;
   z-index: 999999;
@@ -50,16 +53,15 @@ defineProps({
     transform: translateX(0);
   }
 
-  &-header {
+  &--header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
   }
-}
-
-.menu-body{
-  border:1px solid red;
-  flex-grow: 1;
-  padding: 40px 0;
+  &--body {
+    flex-grow: 1;
+    padding: 10px 0;
+  }
 }
 </style>

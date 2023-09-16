@@ -8,8 +8,6 @@ import SimpleButton from "../components/SimpleButton.vue";
 import ProfileCard from "../components/ProfileCard.vue";
 import ProfileCardSkeleton from "../components/ProfileCardSkeleton.vue";
 
-
-
 const showModal = ref(false);
 const closeModal = () => (showModal.value = false);
 const openModal = () => (showModal.value = true);
@@ -19,7 +17,6 @@ const handleClick = () => console.log("click");
 
 <template>
   <Container class="ui">
-
     <!-- <section class="section">
         <h2 class="title">Simple Popup</h2>
         <simple-button size="medium" color="primary" class="btn" @click="openModal">Open Modal</simple-button>

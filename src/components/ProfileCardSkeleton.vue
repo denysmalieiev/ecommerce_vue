@@ -28,7 +28,7 @@
 }
 
 .profile-info h3 {
-  content: ' ';
+  content: " ";
   width: 250px;
   height: 24px;
   background-color: #ddd;

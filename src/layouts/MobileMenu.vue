@@ -16,7 +16,9 @@ const closeDrawer = () => (showDrawer.value = false);
     <simple-drawer :show="showDrawer" @close="closeDrawer">
         <ul class="drawer-menu">
             <li v-for="item in menuItems" :key="item.path" class="menu__item" @click="closeDrawer">
-                <router-link :to="item.path">{{ item.name }}</router-link>
+                <router-link :to="item.path">
+                  <span>{{ item.name }}</span>
+                </router-link>
             </li>
         </ul>
     </simple-drawer>
@@ -26,6 +28,7 @@ const closeDrawer = () => (showDrawer.value = false);
 .btn {
     display: block;
     color: #fff;
+    cursor: pointer;
 
     @media (min-width: 560px) {
         display: none;
@@ -44,8 +47,9 @@ const closeDrawer = () => (showDrawer.value = false);
 }
 
 .menu__item {
-  padding-right: 8px;
   user-select: none;
+  width: 100%;
+  margin-bottom: 12px;
 
   a {
     color: #fff;
@@ -53,15 +57,22 @@ const closeDrawer = () => (showDrawer.value = false);
     line-height: 21px;
     font-weight: 500;
     letter-spacing: normal;
-    background-color: rgba(16, 20, 24, 0.7);
     border: none;
-    transition: color 300ms;
     padding: 8px;
     text-decoration: none;
+    display: block;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+    border-radius: 8px;
   }
-
-  a:hover {
-    color: #acbac8;
+  a:hover{
+    background-color: rgba(110, 89, 89, 0.2);
+  }
+  .exact-active-link{
+    background-color: rgba(110, 89, 89, 0.2);
   }
 }
+
+
 </style>

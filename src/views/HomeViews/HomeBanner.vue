@@ -12,21 +12,26 @@ const modules = [Pagination, Navigation];
 
 // import Container from "../../components/Container.vue";
 
-const swiperItems=[1,2,3,4,5];
-const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrcm1wmrfa5m.webp";
+const swiperItems = [1, 2, 3, 4, 5];
+const imgUrl =
+  "https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrcm1wmrfa5m.webp";
 </script>
 
 <template>
-    <div class="parent">
-      <swiper
-:space-between="30" :pagination="{
+  <div class="parent">
+    <swiper
+      :space-between="30"
+      :pagination="{
         clickable: true,
-      }" :modules="modules" class="mySwiper">
+      }"
+      :modules="modules"
+      class="mySwiper"
+    >
       <swiper-slide v-for="item in swiperItems" :key="item">
-      <img :src="imgUrl" alt=""/>
+        <img :src="imgUrl" alt="" />
       </swiper-slide>
-      </swiper>
-    </div>
+    </swiper>
+  </div>
 </template>
 
 <style lang="scss">
