@@ -12,7 +12,8 @@ const modules = [Pagination, Navigation];
 
 import Container from "../../components/Container.vue";
 
-console.log("home banner");
+const swiperItems=[1,2,3,4,5];
+const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrcm1wmrfa5m.webp";
 </script>
 
 <template>
@@ -22,15 +23,9 @@ console.log("home banner");
 :space-between="30" :pagination="{
         clickable: true,
       }" :modules="modules" class="mySwiper">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
+      <swiper-slide v-for="item in swiperItems" :key="item">
+      <img :src="imgUrl" alt=""/>
+      </swiper-slide>
       </swiper>
     </div>
   </Container>
@@ -39,8 +34,13 @@ console.log("home banner");
 <style lang="scss">
 .parent {
   position: relative;
-  height: 50vh;
-  margin-top: 20px;
+  height: 30vh;
+  @media (min-width: 560px) {
+    height: 40vh;
+  }
+  @media (min-width: 700px) {
+    height: 50vh;
+  }
 }
 
 .swiper {
