@@ -17,7 +17,6 @@ const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrc
 </script>
 
 <template>
-  <Container>
     <div class="parent">
       <swiper
 :space-between="30" :pagination="{
@@ -28,7 +27,6 @@ const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrc
       </swiper-slide>
       </swiper>
     </div>
-  </Container>
 </template>
 
 <style lang="scss">
@@ -40,6 +38,12 @@ const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrc
   }
   @media (min-width: 700px) {
     height: 50vh;
+  }
+  @media (min-width: 900px) {
+    height: 65vh;
+  }
+  @media (min-width: 1200px) {
+    height: 75vh;
   }
 }
 
