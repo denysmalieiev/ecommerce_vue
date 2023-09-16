@@ -1,7 +1,8 @@
 <script setup>
 import SimpleButton from "./SimpleButton.vue";
+import TheLogo from "./TheLogo.vue";
 
-const props = defineProps({
+defineProps({
   show: Boolean,
 });
 </script>
@@ -11,7 +12,7 @@ const props = defineProps({
     <div v-if="show" class="shadow" />
     <div class="menu" :class="{ active: show }">
       <div class="menu-header">
-        <h2>Logo</h2>
+       <TheLogo/>
         <simple-button size="small" color="secondary" @click="$emit('close')">X</simple-button>
       </div>
       <div class="menu-body">
@@ -39,7 +40,7 @@ const props = defineProps({
   width: 100%;
   max-width: 300px;
   height: 100%;
-  background-color: white;
+  background-color: #121212;
   padding: 20px;
   transform: translateX(-100%);
   transition: transform 0.3s linear;
@@ -54,5 +55,11 @@ const props = defineProps({
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.menu-body{
+  border:1px solid red;
+  flex-grow: 1;
+  padding: 40px 0;
 }
 </style>

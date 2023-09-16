@@ -17,11 +17,13 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .footer {
-  background-color: darkcyan;
+  box-shadow: inset 0px -1px 1px rgb(31, 38, 46);
+    background-color: rgba(16, 20, 24, 0.7);
   padding-top: 15px;
   padding-bottom: 15px;
 }
 .title{
+  color: #fff;
   text-align: center;
 }
 </style>

@@ -1,8 +1,8 @@
 <script setup>
 import { onMounted, provide, ref } from "vue";
 
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
+import SimpleHeader from "./SimpleHeader.vue";
+import TheFooter from "./TheFooter.vue";
 
 onMounted(() => {
   console.log("Main layout mounted");
@@ -20,11 +20,11 @@ setTimeout(() => {
 
 <template>
   <div class="layout">
-    <Header />
+    <SimpleHeader />
     <main class="main">
       <slot />
     </main>
-    <Footer />
+    <TheFooter />
   </div>
 </template>
 
@@ -33,7 +33,7 @@ setTimeout(() => {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: darkgray;
+  background-color: #141a1f;
 }
 
 .main {
