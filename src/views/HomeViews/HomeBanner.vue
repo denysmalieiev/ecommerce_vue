@@ -10,7 +10,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 const modules = [Pagination, Navigation];
 
-import Container from "../../components/Container.vue";
+// import Container from "../../components/Container.vue";
 
 const swiperItems=[1,2,3,4,5];
 const imgUrl="https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrcm1wmrfa5m.webp";
