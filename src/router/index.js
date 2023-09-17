@@ -25,7 +25,7 @@ const routes = [
     path: "/login",
     name: "Login",
     meta: { layout: "main", auth: false },
-    component: () => import("../views/Login.vue"),
+    component: () => import("../views/TheLogin.vue"),
   },
   {
     path: "/category/:categoryName",
