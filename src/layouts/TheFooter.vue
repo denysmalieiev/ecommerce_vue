@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
-import Container from "../components/Container.vue";
+import TheContainer from "../components/TheContainer.vue";
 
 onMounted(() => {
   console.log("Footer mounted");
@@ -9,9 +9,9 @@ onMounted(() => {
 
 <template>
   <footer class="footer">
-    <Container>
+    <TheContainer>
       <h2 class="title">Footer</h2>
-    </Container>
+    </TheContainer>
   </footer>
 </template>
 

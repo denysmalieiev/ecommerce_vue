@@ -1,5 +1,5 @@
 <script setup>
-import Container from "../../components/Container.vue";
+import TheContainer from "../../components/TheContainer.vue";
 import HomeBanner from "./HomeBanner.vue";
 import CardList from "../../components/CardList.vue";
 
@@ -9,10 +9,10 @@ const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 <template>
   <div class="homeView">
     <home-banner />
-    <Container>
+    <TheContainer>
       <h2 class="title">Products</h2>
       <card-list :items="items" />
-    </Container>
+    </TheContainer>
   </div>
 </template>
 

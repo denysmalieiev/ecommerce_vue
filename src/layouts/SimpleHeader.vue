@@ -1,5 +1,5 @@
 <script setup>
-import Container from "../components/Container.vue";
+import Container from "../components/TheContainer.vue";
 import MobileMenu from "./MobileMenu.vue";
 import menuItems from "./MenuItems.js";
 import TheLogo from "../components/TheLogo.vue";
