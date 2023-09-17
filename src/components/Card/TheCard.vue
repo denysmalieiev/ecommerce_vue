@@ -4,7 +4,7 @@ import { useRouter } from "vue-router";
 import CardOverlay from "./CardOverlay.vue";
 import CardHeader from "./CardHeader.vue";
 import CardMedia from "./CardMedia.vue";
-import CardAction from "./CardAction.vue";
+// import CardAction from "./CardAction.vue";
 
 const router = useRouter();
 
@@ -17,7 +17,7 @@ const handleClick = () => {
   <card-overlay @clk="handleClick">
     <card-header />
     <card-media />
-    <card-action />
+    <!-- <card-action /> -->
   </card-overlay>
 </template>
 
