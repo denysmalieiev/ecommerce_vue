@@ -14,7 +14,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .container {
-  max-width: 1230px;
+  max-width: 1430px;
   margin: 0 auto;
   width: 100%;
   padding-left: 15px;
