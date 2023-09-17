@@ -14,15 +14,8 @@ const handleClick = () => {
 
 <style scoped lang="scss">
 .card-overlay {
-  max-width: 350px;
   width: 100%;
-  border: 1px solid blue;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 300ms;
-
-  &:hover {
-    transform: scale(1.02);
-  }
 }
 </style>

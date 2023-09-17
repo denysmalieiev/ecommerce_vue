@@ -2,22 +2,22 @@
 import { useRouter } from "vue-router";
 
 import CardOverlay from "./CardOverlay.vue";
-import CardHeader from "./CardHeader.vue";
 import CardMedia from "./CardMedia.vue";
-// import CardAction from "./CardAction.vue";
+import CardInfo from "./CardInfo.vue";
+import CardFooter from "./CardFooter.vue";
 
 const router = useRouter();
 
 const handleClick = () => {
-  router.push("/details/ajdfk");
+  router.push("/details/12345678");
 };
 </script>
 
 <template>
   <card-overlay @clk="handleClick">
-    <card-header />
     <card-media />
-    <!-- <card-action /> -->
+    <card-info />
+    <card-footer />
   </card-overlay>
 </template>
 

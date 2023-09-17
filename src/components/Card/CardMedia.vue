@@ -1,5 +1,5 @@
 <script setup>
-import img from "../../assets/photo.jpeg";
+import img from "../../assets/card-img.jpg";
 </script>
 
 <template>
@@ -10,9 +10,19 @@ import img from "../../assets/photo.jpeg";
 
 <style scoped lang="scss">
 .card-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1.25;
+  background-color: red;
+  border-radius: 8px;
+  position: relative;
+
   img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: inherit;
   }
 }
