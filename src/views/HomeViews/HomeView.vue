@@ -5,16 +5,19 @@ import CarouselOffer from "./CarouselOffer.vue";
 import InlineBanner from "./InlineBanner.vue";
 </script>
 
-
 <template>
   <div class="homeView">
     <home-banner />
     <TheContainer>
-      <CarouselOffer/>
-      <InlineBanner/>
-      <CarouselOffer/>
-      <CarouselOffer/>
-      <CarouselOffer/>
+      <CarouselOffer title="Texnika yarmarkasi" />
+      <InlineBanner />
+      <CarouselOffer title="Butun oila uchun poyabzal" />
+      <CarouselOffer title="Butun oila uchun kiyimlar" />
+      <InlineBanner />
+      <CarouselOffer title="Maktab uchun" />
+      <CarouselOffer title="Maktab formasi" />
+      <InlineBanner />
+      <CarouselOffer title="Foydali kitoblar" />
     </TheContainer>
   </div>
 </template>

@@ -4,12 +4,12 @@ import BannerPhoto from "../../assets/inline-banner.jpg";
 
 <template>
   <div class="inline-banner">
- <img :src="BannerPhoto" alt="banner photo">
+    <img :src="BannerPhoto" alt="banner photo" />
   </div>
 </template>
 
 <style scoped lang="scss">
-.inline-banner{
+.inline-banner {
   background-color: red;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -19,7 +19,7 @@ import BannerPhoto from "../../assets/inline-banner.jpg";
   position: relative;
   border-radius: 10px;
 
-  img{
+  img {
     position: absolute;
     left: 0;
     top: 0;

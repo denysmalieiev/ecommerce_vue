@@ -35,6 +35,5 @@ const props = defineProps({
     grid-row-gap: 15px;
     grid-column-gap: 15px;
   }
-
 }
 </style>
