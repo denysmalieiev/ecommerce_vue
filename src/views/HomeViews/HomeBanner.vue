@@ -39,7 +39,11 @@ const swiperItems = [1, 2, 3, 4, 5];
   position: relative;
   width: 100%;
   height: auto;
-  aspect-ratio: 3/1;
+  aspect-ratio: 16.5/6;
+
+  @media (min-width: 560px) {
+    aspect-ratio: 3/1;
+  }
 }
 
 .swiper {
