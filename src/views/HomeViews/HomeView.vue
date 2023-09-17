@@ -1,17 +1,20 @@
 <script setup>
 import TheContainer from "../../components/TheContainer.vue";
 import HomeBanner from "./HomeBanner.vue";
-import CardList from "../../components/CardList.vue";
-
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+import CarouselOffer from "./CarouselOffer.vue";
+import InlineBanner from "./InlineBanner.vue";
 </script>
+
 
 <template>
   <div class="homeView">
     <home-banner />
     <TheContainer>
-      <h2 class="title">Products</h2>
-      <card-list :items="items" />
+      <CarouselOffer/>
+      <InlineBanner/>
+      <CarouselOffer/>
+      <CarouselOffer/>
+      <CarouselOffer/>
     </TheContainer>
   </div>
 </template>

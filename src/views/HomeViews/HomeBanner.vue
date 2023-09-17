@@ -8,13 +8,13 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper/modules";
 
+import HomeBannerUrl from "../../assets/home-banner.jpg";
+
 const modules = [Pagination, Navigation];
 
 // import Container from "../../components/Container.vue";
 
 const swiperItems = [1, 2, 3, 4, 5];
-const imgUrl =
-  "https://wallpapers.com/images/hd/hd-river-in-the-mountains-kgb9wrcm1wmrfa5m.webp";
 </script>
 
 <template>
@@ -28,7 +28,7 @@ const imgUrl =
       class="mySwiper"
     >
       <swiper-slide v-for="item in swiperItems" :key="item">
-        <img :src="imgUrl" alt="" />
+        <img :src="HomeBannerUrl" alt="banner" />
       </swiper-slide>
     </swiper>
   </div>
@@ -37,19 +37,9 @@ const imgUrl =
 <style lang="scss">
 .parent {
   position: relative;
-  height: 30vh;
-  @media (min-width: 560px) {
-    height: 40vh;
-  }
-  @media (min-width: 700px) {
-    height: 50vh;
-  }
-  @media (min-width: 900px) {
-    height: 65vh;
-  }
-  @media (min-width: 1200px) {
-    height: 75vh;
-  }
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/1;
 }
 
 .swiper {
