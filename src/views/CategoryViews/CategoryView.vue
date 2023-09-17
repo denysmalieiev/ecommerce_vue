@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 
-import Container from "../../components/Container.vue";
+import TheContainer from "../../components/TheContainer.vue";
 import CardList from "../../components/CardList.vue";
 
 const route = useRoute();
@@ -22,10 +22,10 @@ const fun = (a, b) => {
 </script>
 
 <template>
-  <Container>
+  <TheContainer>
     <h2 class="title">Category {{ route.params.categoryName }}</h2>
     <CardList class="list" :items="items" />
-  </Container>
+  </TheContainer>
 </template>
 
 <style scoped lang="scss">

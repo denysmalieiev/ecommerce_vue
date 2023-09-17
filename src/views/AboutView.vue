@@ -3,7 +3,7 @@ import { inject } from "vue";
 import { useForm, ErrorMessage, Form, Field } from "vee-validate";
 import * as yup from "yup";
 
-import Container from "../components/Container.vue";
+import TheContainer from "../components/TheContainer.vue";
 
 const text = inject("text");
 const counter = inject("counter");
@@ -38,7 +38,7 @@ const onSubmit = values => {
 
 <template>
   <div>
-    <Container>
+    <TheContainer>
       <h2>About View</h2>
       <h2>Text: {{ text }}</h2>
       <h2>Counter : {{ counter }}</h2>
@@ -49,7 +49,7 @@ const onSubmit = values => {
         <ErrorMessage name="password" />
         <button>Submit</button>
       </Form>
-    </Container>
+    </TheContainer>
   </div>
 </template>
 

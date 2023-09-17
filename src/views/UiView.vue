@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-import Container from "../components/Container.vue";
+import TheContainer from "../components/TheContainer.vue";
 import SimpleDrawer from "../components/SimpleDrawer.vue";
 import Modal from "../components/Modal.vue";
 import SimpleButton from "../components/SimpleButton.vue";
@@ -16,7 +16,7 @@ const handleClick = () => console.log("click");
 </script>
 
 <template>
-  <Container class="ui">
+  <TheContainer class="ui">
     <!-- <section class="section">
         <h2 class="title">Simple Popup</h2>
         <simple-button size="medium" color="primary" class="btn" @click="openModal">Open Modal</simple-button>
@@ -46,7 +46,7 @@ const handleClick = () => console.log("click");
         </template>
       </Suspense>
     </section>
-  </Container>
+  </TheContainer>
 </template>
 
 <style scoped lang="scss">

@@ -1,9 +1,9 @@
 <script setup>
-import Container from "../../components/Container.vue";
+import TheContainer from "../../components/TheContainer.vue";
 </script>
 
 <template>
-  <Container>
+  <TheContainer>
     <div class="content">
       <div class="image">
         <img src="https://ecommerce-netlify.netlify.app/products/5.png" />
@@ -33,7 +33,7 @@ import Container from "../../components/Container.vue";
         </p>
       </div>
     </div>
-  </Container>
+  </TheContainer>
 </template>
 
 <style scoped lang="scss">
