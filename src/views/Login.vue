@@ -2,7 +2,7 @@
 import { onMounted, inject } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
-import Container from "../components/Container.vue";
+import TheContainer from "../components/TheContainer.vue";
 
 onMounted(() => {
   console.log("login page mounted", Date.now());
@@ -21,11 +21,11 @@ const text = inject("text");
 
 <template>
   <div>
-    <Container>
+    <TheContainer>
       <h2>Login page</h2>
       <p>{{ text }}</p>
       <button @click="handleBackHome">Back</button>
-    </Container>
+    </TheContainer>
   </div>
 </template>
 
