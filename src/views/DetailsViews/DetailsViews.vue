@@ -22,7 +22,6 @@ import MainPhoto from "./MainPhoto.vue";
   grid-row-gap: 20px;
   padding-top: 20px;
   flex-direction: column;
-  border: 1px solid red;
 
   @media (min-width: 500px) {
     grid-template-areas: "p i";
