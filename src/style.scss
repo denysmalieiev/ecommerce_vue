@@ -40,3 +40,13 @@ li,
 button {
   user-select: none;
 }
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  border: white solid 1px;
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}

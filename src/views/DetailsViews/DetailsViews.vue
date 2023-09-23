@@ -29,7 +29,7 @@ import MainPhoto from "./MainPhoto.vue";
     grid-column-gap: 40px;
     grid-row-gap: 0;
   }
-  
+
   @media (min-width: 900px) {
     padding-top: 50px;
     grid-template-areas: "p i";
