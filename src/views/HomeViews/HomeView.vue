@@ -1,7 +1,6 @@
 <script setup>
 import TheContainer from "../../components/TheContainer.vue";
 import HomeBanner from "./HomeBanner.vue";
-// import CarouselOffer from "./CarouselOffer.vue";
 import InlineBanner from "./InlineBanner.vue";
 import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
 </script>

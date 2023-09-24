@@ -2,6 +2,7 @@
 import TheContainer from "../../components/TheContainer.vue";
 import ProductInfo from "./ProductInfo.vue";
 import MainPhoto from "./MainPhoto.vue";
+import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
 </script>
 
 <template>
@@ -10,6 +11,8 @@ import MainPhoto from "./MainPhoto.vue";
       <MainPhoto class="mainPhoto" />
       <ProductInfo class="productInfo" />
     </div>
+    <SimpleCarousel title="O'xshash productlar" />
+    <SimpleCarousel title="Yaqinda ko'rilgan maxsulotlar" />
   </TheContainer>
 </template>
 

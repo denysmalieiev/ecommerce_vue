@@ -10,6 +10,7 @@ const router = useRouter();
 
 const handleClick = () => {
   router.push("/details/12345678");
+  window.scrollTo({ top: 0 });
 };
 </script>
 
