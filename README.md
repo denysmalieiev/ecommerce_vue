@@ -1,15 +1,25 @@
-#### Simple Ecommerce-Website
+# Simple Ecommerce-Website
 
-## Technologies
+## It is an Online Shopping web application developed using Vuejs, Swiperjs, Pinia and JavaScript.
 
-# Vuejs
+### Technology used in this Project:
 
-# Pinia
+- i) Vuejs
+- ii) Pinia
+- iii) Swiperjs
+- iv) Html
+- v) Sass
 
-# Swiperjs
+### Some Screenshots of this Project:
 
-# Html
+# ![Home Page](a.png)
 
-# Sass
+# ![Category page](b.png)
 
-- [Visit](https://shopping-project-in-vuejs.vercel.app/)
+# ![Category page](c.png)
+
+# ![Mobile menu](d.png)
+
+![Home page](e.png)
+
+- [Demo version](https://shopping-project-in-vuejs.vercel.app/)
