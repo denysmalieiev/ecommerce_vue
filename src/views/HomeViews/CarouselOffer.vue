@@ -17,7 +17,7 @@ defineProps({
 const navigationPrevRef = ref(null);
 const navigationNextRef = ref(null);
 const modules = [Navigation];
-const items = [1, 2, 3, 4, 5];
+const items = [1, 2, 3, 4, 5,6,7,8];
 </script>
 <template>
   <div>
@@ -102,9 +102,6 @@ const items = [1, 2, 3, 4, 5];
   position: relative;
   width: 100%;
   height: auto;
-
-  @media (min-width: 560px) {
-  }
 }
 
 .swiper {
@@ -137,7 +134,7 @@ const items = [1, 2, 3, 4, 5];
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #fff;
   border: 1px solid #fff;
   top: 50%;
   transform: translateY(-50%);
@@ -147,21 +144,18 @@ const items = [1, 2, 3, 4, 5];
   display: none;
 
   &:disabled {
-    opacity: 0.3;
-    cursor: none;
+    display: none;
   }
   @media (min-width: 500px) {
     display: block;
   }
 }
-
 .prevBtn {
   left: 15px;
   @media (min-width: 900px) {
     left: 25px;
   }
 }
-
 .nextBtn {
   right: 15px;
   @media (min-width: 900px) {

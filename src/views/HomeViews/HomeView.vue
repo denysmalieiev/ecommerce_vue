@@ -32,19 +32,4 @@ import InlineBanner from "./InlineBanner.vue";
     padding: 30px 0;
   }
 }
-.title {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #fff;
-  margin-top: 25px;
-  @media (min-width: 560px) {
-    font-size: 28px;
-  }
-}
-
-.items {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 </style>

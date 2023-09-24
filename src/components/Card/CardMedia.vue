@@ -13,7 +13,6 @@ import img from "../../assets/card-img.jpg";
   width: 100%;
   height: auto;
   aspect-ratio: 1/1.25;
-  background-color: red;
   border-radius: 8px;
   position: relative;
 

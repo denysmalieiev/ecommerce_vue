@@ -10,7 +10,6 @@ import BannerPhoto from "../../assets/inline-banner.jpg";
 
 <style scoped lang="scss">
 .inline-banner {
-  background-color: red;
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
