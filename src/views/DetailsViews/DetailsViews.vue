@@ -11,8 +11,8 @@ import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
       <MainPhoto class="mainPhoto" />
       <ProductInfo class="productInfo" />
     </div>
-    <SimpleCarousel title="O'xshash productlar" />
-    <SimpleCarousel title="Yaqinda ko'rilgan maxsulotlar" />
+    <SimpleCarousel title="Related products" />
+    <SimpleCarousel title="Products viewed" />
   </TheContainer>
 </template>
 
