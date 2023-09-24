@@ -11,6 +11,7 @@ import PrevSVG from "../../components/SvgFiles/PrevSvg.vue";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useRouter } from "vue-router";
 
 const modules = [Autoplay, Pagination, Navigation];
 const swiperItems = [1, 2, 3, 4, 5];
@@ -19,10 +20,15 @@ const progressContent = ref(null);
 
 const navigationPrevRef = ref(null);
 const navigationNextRef = ref(null);
+const router=useRouter();
 
 const onAutoplayTimeLeft = (s, time, progress) => {
   progressCircle.value.style.setProperty("--progress", 1 - progress);
   progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
+};
+
+const handleClick=()=>{
+  router.push("/details/351735");
 };
 </script>
 
@@ -48,7 +54,7 @@ const onAutoplayTimeLeft = (s, time, progress) => {
       @autoplayTimeLeft="onAutoplayTimeLeft"
     >
       <swiper-slide v-for="item in swiperItems" :key="item">
-        <img :src="HomeBannerUrl" alt="banner" />
+        <img :src="HomeBannerUrl" alt="banner" @click="handleClick" />
       </swiper-slide>
       <template #container-end>
         <div class="autoplay-progress">

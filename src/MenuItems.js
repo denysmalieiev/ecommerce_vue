@@ -15,4 +15,12 @@ export default [
     path: "/category/pringles-emmental-sheese",
     name: "Pringles emmental sheese",
   },
+  {
+    path: "/category/pringles-hot",
+    name: "Pringles hot",
+  },
+  {
+    path: "/category/pringles-potato-chips",
+    name: "Pringles potato chisp",
+  },
 ];

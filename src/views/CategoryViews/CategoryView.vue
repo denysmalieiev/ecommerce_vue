@@ -1,30 +1,17 @@
 <script setup>
-import { useRoute } from "vue-router";
-
+import CategoryContent from "./CategoryContent.vue";
 import TheContainer from "../../components/TheContainer.vue";
-import CardList from "../../components/CardList.vue";
-
-const route = useRoute();
-console.log("route: ", route.params.categoryName);
-
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
-/**
- * fun
- * @param {number} a
- * @param {number} b
- * @return {number} a+b;
- */
-
-const fun = (a, b) => {
-  return a + b;
-};
+import CategoryAside from "./CategoryAside.vue";
+import CategoryHeader from "./CategoryHeader.vue";
 </script>
 
 <template>
   <TheContainer>
-    <h2 class="title">Category {{ route.params.categoryName }}</h2>
-    <CardList class="list" :items="items" />
+    <category-header/>
+   <div class="contentWrapper">
+    <category-aside class="aside"/>
+    <category-content class="content"/>
+   </div>
   </TheContainer>
 </template>
 
@@ -35,8 +22,19 @@ const fun = (a, b) => {
   padding: 20px 0;
 }
 
-.list {
-  padding-top: 50px;
-  padding-bottom: 80px;
+.contentWrapper{
+  display: grid;
+  grid-template-areas: 'c c';
+  grid-template-columns: 2fr 8fr;
+  grid-column-gap: 30px;
+  @media (min-width: 650px) {
+    grid-template-areas: 'a c';
+  }
+}
+.aside{
+  grid-area: a;
+}
+.content{
+  grid-area: c;
 }
 </style>
