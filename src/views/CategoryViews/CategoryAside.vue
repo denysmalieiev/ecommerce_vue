@@ -7,16 +7,22 @@
   {id:5,title:"Pringles hot",link:"/category/pringles-hot"},
   {id:6,title:"Pringles potato chips",link:"/category/pringles-potato-chips"},
  ];
+ 
+ const handleClick=()=>{
+  window.scrollTo({ top: 0 });
+ };
 </script>
 
 <template>
   <div class="categoryAside">
+ <div class="categoryAsideContent">
   <h2 class="title">Categories</h2>
     <ul class="categoryList">
-      <li v-for="item in items" :key="item.id" class="listItem">
+      <li v-for="item in items" :key="item.id" class="listItem" @click="handleClick">
         <router-link :to="item.link">{{ item.title }}</router-link>
       </li>
     </ul>
+ </div>
   </div>
 </template>
 
@@ -26,6 +32,10 @@
   @media (min-width: 650px) {
     display: block;
   }
+}
+.categoryAsideContent{
+  position: sticky;
+  top: 10px;
 }
 .categoryList{
   padding: 15px 0;
