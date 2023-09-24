@@ -10,14 +10,14 @@
 
 ### Some Screenshots of this Project:
 
-# ![Home Page](a.png)
+# ![Home Page](a1.png)
 
-# ![Category page](b.png)
+# ![Category page](a2.png)
 
-# ![Category page](c.png)
+# ![Category page](a3.png)
 
-# ![Mobile menu](d.png)
+# ![Mobile menu](a4.png)
 
-![Home page](e.png)
+# ![Home page](a5.png)
 
 - [Demo version](https://shopping-project-in-vuejs.vercel.app/)
