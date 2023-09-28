@@ -3,14 +3,13 @@ import photoUrl from "../../assets/card-img.jpg";
 </script>
 
 <template>
-  <div class="MainPhoto">
-    <!-- <PhotoNavigation /> -->
+  <div class="mainPhoto">
     <img :src="photoUrl" alt="photo" />
   </div>
 </template>
 
 <style scoped lang="scss">
-.MainPhoto {
+.mainPhoto {
   width: 100%;
   border-radius: 4px;
 

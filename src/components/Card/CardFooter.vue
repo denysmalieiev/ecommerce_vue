@@ -1,10 +1,10 @@
 <script setup>
-const price = "70 000";
+const price = "5";
 </script>
 
 <template>
   <div class="card-footer">
-    <p class="price">{{ price }} so'm</p>
+    <p class="price">Price: {{ price }} $</p>
     <div class="add-card">
       <svg
         width="24"

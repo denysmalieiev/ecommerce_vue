@@ -1,19 +1,17 @@
 <script setup>
-const title = "Kartoshka Pringles chipslari";
+const title = "Pringles chisp";
 const rating = 5;
-const countRating = 27;
-const price = "70 000";
+const price = "5";
 </script>
 
 <template>
   <div class="info">
     <p class="rating">
-      {{ rating }} ({{ countRating }} ta baho) 1500 ta buyurtma
+      Rating: {{ rating }}
     </p>
     <h1 class="title">{{ title }}</h1>
     <p class="price">
-      Narx: <br />
-      <span>{{ price }} so'm</span>
+      Price: <span>{{ price }} $</span>
     </p>
   </div>
 </template>

@@ -1,13 +1,12 @@
 <script setup>
-const title = "Kartoshka Pringles chipslari";
-const rating = 5;
-const countRating = 27;
+const title = "Pringles chips";
+const rating = 4.2;
 </script>
 
 <template>
   <div class="card-info">
     <h4 class="card-title">{{ title }}</h4>
-    <p class="card-rating">{{ rating }} ({{ countRating }} ta baho)</p>
+    <p class="card-rating">Rating: {{ rating }}</p>
   </div>
 </template>
 
@@ -15,6 +14,7 @@ const countRating = 27;
 .card-info {
   width: 100%;
   padding: 10px;
+  text-align: left;
 }
 
 .card-title {
