@@ -1,10 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
 import TheContainer from "../components/TheContainer.vue";
-
-onMounted(() => {
-  console.log("Footer mounted");
-});
 </script>
 
 <template>

@@ -1,11 +1,3 @@
-<script setup>
-import { onMounted } from "vue";
-
-onMounted(() => {
-  console.log("container com mounted");
-});
-</script>
-
 <template>
   <div class="container">
     <slot />

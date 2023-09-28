@@ -19,7 +19,6 @@ const userData = ref(await loadUserData());
 <template>
   <div class="profile-card">
     <div class="profile-image">
-      <img class="profile-image__border" src="../assets/photo.jpeg" />
       <img class="profile-image__img" :src="userData.pic" />
     </div>
     <div class="profile-info">
