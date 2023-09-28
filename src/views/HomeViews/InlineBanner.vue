@@ -1,5 +1,5 @@
 <script setup>
-import BannerPhoto from "../../assets/inline-banner.jpg";
+import BannerPhoto from "../../assets/in-banner.jpg";
 </script>
 
 <template>

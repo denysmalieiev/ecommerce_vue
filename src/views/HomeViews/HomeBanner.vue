@@ -4,7 +4,7 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import HomeBannerUrl from "../../assets/home-banner.jpg";
+import HomeBannerUrl from "../../assets/banner.jpg";
 import NextSVG from "../../components/SvgFiles/NextSvg.vue";
 import PrevSVG from "../../components/SvgFiles/PrevSvg.vue";
 
@@ -74,15 +74,18 @@ const handleClick=()=>{
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .parent {
   position: relative;
   width: 100%;
   height: auto;
-  aspect-ratio: 16.5/6;
+  aspect-ratio: 13/6;
 
   @media (min-width: 560px) {
-    aspect-ratio: 3/1;
+    aspect-ratio: 7/3;
+  }
+  @media (min-width: 920px) {
+    aspect-ratio:8/3;
   }
 }
 .autoplay-progress {

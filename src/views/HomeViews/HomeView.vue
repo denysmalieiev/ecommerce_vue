@@ -9,15 +9,15 @@ import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
   <div class="homeView">
     <home-banner />
     <TheContainer>
-      <SimpleCarousel title="Texnika yarmarkasi" />
+      <SimpleCarousel title="Pringles chips" />
       <InlineBanner />
-      <SimpleCarousel title="Butun oila uchun poyabzal" />
-      <SimpleCarousel title="Butun oila uchun kiyimlar" />
+      <SimpleCarousel title="Pringles original chips" />
+      <SimpleCarousel title="Pringles potato" />
       <InlineBanner />
-      <SimpleCarousel title="Maktab uchun" />
-      <SimpleCarousel title="Maktab formasi" />
+      <SimpleCarousel title="Pringles chips" />
+      <SimpleCarousel title="Pringles emmental chips" />
       <InlineBanner />
-      <SimpleCarousel title="Foydali kitoblar" />
+      <SimpleCarousel title="Pringles potato" />
     </TheContainer>
   </div>
 </template>
