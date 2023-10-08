@@ -1,11 +1,24 @@
 <script setup>
+import { ref } from "vue";
+
+import CardPopup from "./CardPopup.vue";
+
 const price = "5";
+
+const showPopup=ref(false);
+
+const openPopup=(e)=>{
+  e.stopPropagation();
+  showPopup.value=true;
+};
+
+const closePopup=()=> showPopup.value=false;
 </script>
 
 <template>
   <div class="card-footer">
     <p class="price">Price: {{ price }} $</p>
-    <div class="add-card">
+    <button class="add-card" @click="openPopup">
       <svg
         width="24"
         height="24"
@@ -23,8 +36,10 @@ const price = "5";
           fill="white"
         ></path>
       </svg>
-    </div>
+    </button>
+    <card-popup :show="showPopup" :close="closePopup"/>
   </div>
+  
 </template>
 
 <style scoped lang="scss">
