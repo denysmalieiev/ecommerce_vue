@@ -1,10 +1,10 @@
 <script setup>
-import photoUrl from "../../assets/card-img.jpg";
+defineProps(["src"]);
 </script>
 
 <template>
   <div class="mainPhoto">
-    <img :src="photoUrl" alt="photo" />
+    <img :src="src" alt="photo" />
   </div>
 </template>
 

@@ -1,18 +1,27 @@
 <script setup>
+import { onMounted, ref } from "vue";
+
 import TheContainer from "../../components/TheContainer.vue";
-import ProductInfo from "./ProductInfo.vue";
 import MainPhoto from "./MainPhoto.vue";
-import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
+import ProductInfo from "./ProductInfo.vue";
+import RelatedProducts from "./RelatedProducts.vue";
+import { DetailsApi } from "../../http/details-api";
+
+const data=ref({});
+
+onMounted(async ()=>{
+  const res=await DetailsApi.productInfo();
+  data.value=res.data;
+});
 </script>
 
 <template>
   <TheContainer>
     <div class="details_top">
-      <MainPhoto class="mainPhoto" />
-      <ProductInfo class="productInfo" />
+      <MainPhoto class="mainPhoto" :src="data.src"/>
+      <ProductInfo class="productInfo" :title="data.title" :rating="data.rating" :price="data.price"/>
     </div>
-    <SimpleCarousel title="Related products" />
-    <SimpleCarousel title="Products viewed" />
+    <RelatedProducts/>
   </TheContainer>
 </template>
 

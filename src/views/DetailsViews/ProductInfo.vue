@@ -1,7 +1,5 @@
 <script setup>
-const title = "Pringles chisp";
-const rating = 5;
-const price = "5";
+defineProps(["title","rating","price"]);
 </script>
 
 <template>
