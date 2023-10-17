@@ -1,10 +1,12 @@
 <script setup>
-import img from "../../assets/card-img.jpg";
+import DefaultPhoto from "../../assets/phone.jpeg";
+
+defineProps(["src"]);
 </script>
 
 <template>
   <div class="card-media">
-    <img alt="photo" :src="img" />
+    <img alt="photo" :src="src || DefaultPhoto" />
   </div>
 </template>
 

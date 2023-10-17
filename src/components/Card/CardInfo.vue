@@ -1,11 +1,12 @@
 <script setup>
-const title = "Pringles chips";
 const rating = 4.2;
+
+defineProps(["title"]);
 </script>
 
 <template>
   <div class="card-info">
-    <h4 class="card-title">{{ title }}</h4>
+    <h4 class="card-title">{{ title || "Phone" }}</h4>
     <p class="card-rating">Rating: {{ rating }}</p>
   </div>
 </template>

@@ -3,7 +3,7 @@ import { ref } from "vue";
 
 import CardPopup from "./CardPopup.vue";
 
-const price = "5";
+defineProps(["price"]);
 
 const showPopup = ref(false);
 
@@ -17,7 +17,7 @@ const closePopup = () => (showPopup.value = false);
 
 <template>
   <div class="card-footer">
-    <p class="price">Price: {{ price }} $</p>
+    <p class="price">Price: {{ price || 500 }} $</p>
     <button class="add-card" @click="openPopup">
       <svg
         width="24"

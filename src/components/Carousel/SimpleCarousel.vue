@@ -14,12 +14,12 @@ import "swiper/css/navigation";
 
 defineProps({
   title: String,
+  items: Array,
 });
 
 const navigationPrevRef = ref(null);
 const navigationNextRef = ref(null);
 const modules = [Navigation];
-const items = [1, 2, 3, 4, 5, 6, 7, 8];
 </script>
 <template>
   <div>
@@ -51,7 +51,7 @@ const items = [1, 2, 3, 4, 5, 6, 7, 8];
         }"
         class="mySwiper"
       >
-        <swiper-slide v-for="item in items" :key="item">
+        <swiper-slide v-for="item in items" :key="item.id">
           <TheCard :item="item" />
         </swiper-slide>
       </swiper>

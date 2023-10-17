@@ -1,23 +1,30 @@
 <script setup>
+import { onMounted, ref } from "vue";
+
 import TheContainer from "../../components/TheContainer.vue";
 import HomeBanner from "./HomeBanner.vue";
 import InlineBanner from "./InlineBanner.vue";
 import SimpleCarousel from "../../components/Carousel/SimpleCarousel.vue";
+import { HomeApi } from "../../http/home-api";
+
+const sections = ref([]);
+
+onMounted(async () => {
+  const res = await HomeApi.homeSections();
+  sections.value = res.data;
+});
 </script>
 
 <template>
   <div class="homeView">
     <home-banner />
-    <TheContainer>
-      <SimpleCarousel title="Pringles chips" />
-      <InlineBanner />
-      <SimpleCarousel title="Pringles original chips" />
-      <SimpleCarousel title="Pringles potato" />
-      <InlineBanner />
-      <SimpleCarousel title="Pringles chips" />
-      <SimpleCarousel title="Pringles emmental chips" />
-      <InlineBanner />
-      <SimpleCarousel title="Pringles potato" />
+    <TheContainer v-for="{ id, type, title, items } in sections" :key="id">
+      <template v-if="type === 'banner'">
+        <InlineBanner />
+      </template>
+      <template v-if="type === 'carousel'">
+        <SimpleCarousel :title="title" :items="items" />
+      </template>
     </TheContainer>
   </div>
 </template>

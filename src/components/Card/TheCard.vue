@@ -8,6 +8,10 @@ import CardFooter from "./CardFooter.vue";
 
 const router = useRouter();
 
+defineProps({
+  item: Object,
+});
+
 const handleClick = () => {
   router.push("/details/12345678");
   window.scrollTo({ top: 0 });
@@ -16,9 +20,9 @@ const handleClick = () => {
 
 <template>
   <card-overlay @clk="handleClick">
-    <card-media />
-    <card-info />
-    <card-footer />
+    <card-media :src="item.src" />
+    <card-info :title="item.title" />
+    <card-footer :price="item.price" />
   </card-overlay>
 </template>
 
