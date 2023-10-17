@@ -19,7 +19,7 @@ defineProps({
 const navigationPrevRef = ref(null);
 const navigationNextRef = ref(null);
 const modules = [Navigation];
-const items = [1, 2, 3, 4, 5,6,7,8];
+const items = [1, 2, 3, 4, 5, 6, 7, 8];
 </script>
 <template>
   <div>
@@ -56,10 +56,10 @@ const items = [1, 2, 3, 4, 5,6,7,8];
         </swiper-slide>
       </swiper>
       <button ref="navigationPrevRef" class="prevBtn">
-       <PrevSVG/>
+        <PrevSVG />
       </button>
       <button ref="navigationNextRef" class="nextBtn">
-       <NextSVG/>
+        <NextSVG />
       </button>
     </div>
   </div>

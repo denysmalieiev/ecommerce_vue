@@ -2,34 +2,34 @@
 import ThePopup from "../ThePopup/ThePopup.vue";
 import img from "../../assets/card-img.jpg";
 
-defineProps(["show","close"]);
+defineProps(["show", "close"]);
 
 const title = "Pringles chips";
 const rating = 4.2;
 </script>
 
 <template>
-<the-popup :show="show" @close="close">
-  <div class="product_popup">
-   <div class="img">
-      <img :src="img" alt="Product photo"/>
-   </div>
-   <div class="info">
-    <h4 class="title">{{ title }}</h4>
-    <p class="rating">Rating: {{ rating }}</p>
-   </div>
-  </div>
- </the-popup>
+  <the-popup :show="show" @close="close">
+    <div class="product_popup">
+      <div class="img">
+        <img :src="img" alt="Product photo" />
+      </div>
+      <div class="info">
+        <h4 class="title">{{ title }}</h4>
+        <p class="rating">Rating: {{ rating }}</p>
+      </div>
+    </div>
+  </the-popup>
 </template>
 
 <style scoped lang="scss">
-.product_popup{
+.product_popup {
   display: grid;
   grid-template-columns: 2fr 4fr;
   grid-column-gap: 25px;
 }
-.img{
-  img{
+.img {
+  img {
     width: 100%;
     height: auto;
   }

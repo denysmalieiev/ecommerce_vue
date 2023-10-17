@@ -6,9 +6,7 @@ const price = "5";
 
 <template>
   <div class="info">
-    <p class="rating">
-      Rating: {{ rating }}
-    </p>
+    <p class="rating">Rating: {{ rating }}</p>
     <h1 class="title">{{ title }}</h1>
     <p class="price">
       Price: <span>{{ price }} $</span>

@@ -63,7 +63,8 @@ import TheLogo from "../components/TheLogo.vue";
     text-decoration: none;
   }
 
-  .exact-active-link,a:hover {
+  .exact-active-link,
+  a:hover {
     color: #acbac8;
   }
 }

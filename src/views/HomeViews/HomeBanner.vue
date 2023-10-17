@@ -1,76 +1,92 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import HomeBannerUrl from "../../assets/banner.jpg";
 import NextSVG from "../../components/SvgFiles/NextSvg.vue";
 import PrevSVG from "../../components/SvgFiles/PrevSvg.vue";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useRouter } from "vue-router";
+
+import { HomeApi } from "../../http/home-api";
+import HomeBannerSkeleton from "./HomeBannerSkeleton.vue";
 
 const modules = [Autoplay, Pagination, Navigation];
-const swiperItems = [1, 2, 3, 4, 5];
+
+onMounted(async () => {
+  status.value = "loading";
+  const res = await HomeApi.homeBanners();
+  banners.value = res.data;
+  status.value = "success";
+});
+
+const banners = ref([]);
+const status = ref("");
 const progressCircle = ref(null);
 const progressContent = ref(null);
-
 const navigationPrevRef = ref(null);
 const navigationNextRef = ref(null);
-const router=useRouter();
+
+const router = useRouter();
 
 const onAutoplayTimeLeft = (s, time, progress) => {
   progressCircle.value.style.setProperty("--progress", 1 - progress);
   progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
 };
 
-const handleClick=()=>{
+const handleClick = () => {
   router.push("/details/351735");
 };
 </script>
 
 <template>
   <div class="parent">
-    <swiper
-      :space-between="30"
-      :centered-slides="true"
-      :loop="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
-      :pagination="{
-        clickable: true,
-      }"
-      :navigation="{
-        prevEl: navigationPrevRef,
-        nextEl: navigationNextRef,
-      }"
-      :modules="modules"
-      class="mySwiper"
-      @autoplayTimeLeft="onAutoplayTimeLeft"
-    >
-      <swiper-slide v-for="item in swiperItems" :key="item">
-        <img :src="HomeBannerUrl" alt="banner" @click="handleClick" />
-      </swiper-slide>
-      <template #container-end>
-        <div class="autoplay-progress">
-          <svg ref="progressCircle" viewBox="0 0 48 48">
-            <circle cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref="progressContent"></span>
-        </div>
-      </template>
-    </swiper>
-    <button ref="navigationPrevRef" class="prevBtn">
-     <PrevSVG/>
-    </button>
-    <button ref="navigationNextRef" class="nextBtn">
-     <NextSVG/>
-    </button>
+    <template v-if="status === 'loading'">
+      <HomeBannerSkeleton />
+    </template>
+    <template v-else>
+      <swiper
+        :space-between="30"
+        :centered-slides="true"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="{
+          prevEl: navigationPrevRef,
+          nextEl: navigationNextRef,
+        }"
+        :modules="modules"
+        class="mySwiper"
+        @autoplayTimeLeft="onAutoplayTimeLeft"
+      >
+        <swiper-slide v-for="item in banners" :key="item.id">
+          <img :src="item.src" alt="banner" @click="handleClick" />
+        </swiper-slide>
+        <template #container-end>
+          <div class="autoplay-progress">
+            <svg ref="progressCircle" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref="progressContent"></span>
+          </div>
+        </template>
+      </swiper>
+      <button ref="navigationPrevRef" class="prevBtn">
+        <PrevSVG />
+      </button>
+      <button ref="navigationNextRef" class="nextBtn">
+        <NextSVG />
+      </button>
+    </template>
   </div>
 </template>
 
@@ -85,7 +101,7 @@ const handleClick=()=>{
     aspect-ratio: 7/3;
   }
   @media (min-width: 920px) {
-    aspect-ratio:8/3;
+    aspect-ratio: 8/3;
   }
 }
 .autoplay-progress {

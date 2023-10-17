@@ -38,19 +38,19 @@ defineProps({
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: auto;
   min-width: 320px;
   height: auto;
   background-color: #121212;
   padding: 0 20px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   transition: transform 0.3s linear;
   z-index: 999999;
   display: none;
   border-radius: 6px;
 
-  &.active{
+  &.active {
     display: block;
   }
 

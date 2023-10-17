@@ -5,14 +5,14 @@ import CardPopup from "./CardPopup.vue";
 
 const price = "5";
 
-const showPopup=ref(false);
+const showPopup = ref(false);
 
-const openPopup=(e)=>{
+const openPopup = e => {
   e.stopPropagation();
-  showPopup.value=true;
+  showPopup.value = true;
 };
 
-const closePopup=()=> showPopup.value=false;
+const closePopup = () => (showPopup.value = false);
 </script>
 
 <template>
@@ -37,9 +37,8 @@ const closePopup=()=> showPopup.value=false;
         ></path>
       </svg>
     </button>
-    <card-popup :show="showPopup" :close="closePopup"/>
+    <card-popup :show="showPopup" :close="closePopup" />
   </div>
-  
 </template>
 
 <style scoped lang="scss">
