@@ -1,4 +1,3 @@
-import HomeBannerUrl from "../assets/banner.jpg";
 import PhotoIphone15 from "../assets/phone.jpeg";
 import S23 from "../assets/s23.jpeg";
 import MacBook from "../assets/macbook.jpeg";
@@ -8,26 +7,17 @@ import Watch from "../assets/watch.jpeg";
 import Watch2 from "../assets/watch2.jpeg";
 import Watch3 from "../assets/watch3.jpeg";
 
+import HomeBanner from "../assets/iphone15.jpg";
+import HomeBannerPhones from "../assets/banner-phones.jpg";
+
 const homeBannersData = [
   {
     id: 1,
-    banner: "banner",
-    src: HomeBannerUrl,
+    src: HomeBanner,
   },
   {
     id: 2,
-    banner: "bandf",
-    src: HomeBannerUrl,
-  },
-  {
-    id: 3,
-    banner: "bandf",
-    src: HomeBannerUrl,
-  },
-  {
-    id: 4,
-    banner: "bandf",
-    src: HomeBannerUrl,
+    src: HomeBannerPhones,
   },
 ];
 
@@ -72,6 +62,7 @@ export const HomeApi = {
         {
           id: 3,
           type: "banner",
+          src: HomeBanner,
         },
         {
           id: 4,
@@ -102,6 +93,7 @@ export const HomeApi = {
         {
           id: 6,
           type: "banner",
+          src: HomeBannerPhones,
         },
       ],
     };

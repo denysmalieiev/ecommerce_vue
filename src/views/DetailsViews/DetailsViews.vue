@@ -7,21 +7,26 @@ import ProductInfo from "./ProductInfo.vue";
 import RelatedProducts from "./RelatedProducts.vue";
 import { DetailsApi } from "../../http/details-api";
 
-const data=ref({});
+const data = ref({});
 
-onMounted(async ()=>{
-  const res=await DetailsApi.productInfo();
-  data.value=res.data;
+onMounted(async () => {
+  const res = await DetailsApi.productInfo();
+  data.value = res.data;
 });
 </script>
 
 <template>
   <TheContainer>
     <div class="details_top">
-      <MainPhoto class="mainPhoto" :src="data.src"/>
-      <ProductInfo class="productInfo" :title="data.title" :rating="data.rating" :price="data.price"/>
+      <MainPhoto class="mainPhoto" :src="data.src" />
+      <ProductInfo
+        class="productInfo"
+        :title="data.title"
+        :rating="data.rating"
+        :price="data.price"
+      />
     </div>
-    <RelatedProducts/>
+    <RelatedProducts />
   </TheContainer>
 </template>
 

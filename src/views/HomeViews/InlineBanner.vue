@@ -1,10 +1,10 @@
 <script setup>
-import BannerPhoto from "../../assets/in-banner.jpg";
+defineProps(["src"]);
 </script>
 
 <template>
   <div class="inline-banner">
-    <img :src="BannerPhoto" alt="banner photo" />
+    <img :src="src" alt="banner photo" />
   </div>
 </template>
 

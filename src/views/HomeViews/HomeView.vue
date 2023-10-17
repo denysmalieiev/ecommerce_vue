@@ -18,9 +18,9 @@ onMounted(async () => {
 <template>
   <div class="homeView">
     <home-banner />
-    <TheContainer v-for="{ id, type, title, items } in sections" :key="id">
+    <TheContainer v-for="{ id, type, title, items, src } in sections" :key="id">
       <template v-if="type === 'banner'">
-        <InlineBanner />
+        <InlineBanner :src="src" />
       </template>
       <template v-if="type === 'carousel'">
         <SimpleCarousel :title="title" :items="items" />

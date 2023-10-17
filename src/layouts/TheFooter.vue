@@ -5,7 +5,7 @@ import TheContainer from "../components/TheContainer.vue";
 <template>
   <footer class="footer">
     <TheContainer>
-      <h2 class="title">Footer</h2>
+      <h2 class="title">Made by <a href="https://solijonov.vercel.app/" target="_blank">Solijonov</a></h2>
     </TheContainer>
   </footer>
 </template>
