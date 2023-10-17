@@ -1,18 +1,18 @@
 export default [
   {
-    path: "/category/pringles-chips",
-    name: "Pringles chips",
+    path: "/category/electronics",
+    name: "Electronics",
   },
   {
-    path: "/category/pringles-original-chips",
-    name: "Pringles original chips",
+    path: "/category/phones",
+    name: "Phones",
   },
   {
-    path: "/category/pringles-potato",
-    name: "Pringles potato  ",
+    path: "/category/smart-watches",
+    name: "Smart watches",
   },
   {
-    path: "/category/pringles-emmental-sheese",
-    name: "Pringles emmental sheese",
+    path: "/category/computers",
+    name: "Computers",
   },
 ];
