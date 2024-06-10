@@ -16,4 +16,4 @@
 
 # ![Mobile menu](public/a4.png)
 
-- [Demo version](https://shopping-project-in-vuejs.vercel.app/)
+- [Demo version](https://ecommerce-demo-project.vercel.app/)
