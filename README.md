@@ -15,5 +15,3 @@
 # ![Category page](public/a3.png)
 
 # ![Mobile menu](public/a4.png)
-
-- [Demo version](https://ecommerce-demo-project.vercel.app/)
